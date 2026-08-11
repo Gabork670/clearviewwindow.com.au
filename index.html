@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ClearView Window Detailing | Window Cleaning Across Sydney</title>
 <meta name="description" content="Detailed residential and commercial window cleaning across Sydney. Frames, tracks, screens and glass fences included. Free quotes.">
+<link rel="icon" href="images/logo.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
 <!-- ============================================================
      SERVICE AREA, MACHINE READABLE
@@ -16,6 +17,7 @@
      shown on the page. Add or remove a suburb by copying one of the
      lines below. Keep the commas and the quote marks exactly as they
      are or the whole block stops working.
+     Once the site has a web address, put it in the "url" line.
      ============================================================ -->
 <script type="application/ld+json">
 {
@@ -32,7 +34,16 @@
     "addressRegion": "NSW",
     "addressCountry": "AU"
   },
+  "sameAs": [
+    "https://www.facebook.com/clearviewwindowdetailing/",
+    "https://www.instagram.com/window.clearview/"
+  ],
   "areaServed": [
+    { "@type": "Place", "name": "The Hills District, NSW" },
+    { "@type": "Place", "name": "North Rocks, NSW" },
+    { "@type": "Place", "name": "Castle Hill, NSW" },
+    { "@type": "Place", "name": "Bella Vista, NSW" },
+    { "@type": "Place", "name": "Baulkham Hills, NSW" },
     { "@type": "Place", "name": "Sutherland Shire, NSW" },
     { "@type": "Place", "name": "Cronulla, NSW" },
     { "@type": "Place", "name": "Caringbah, NSW" },
@@ -40,13 +51,15 @@
     { "@type": "Place", "name": "Sutherland, NSW" },
     { "@type": "Place", "name": "Engadine, NSW" },
     { "@type": "Place", "name": "Barden Ridge, NSW" },
-    { "@type": "Place", "name": "North Rocks, NSW" },
-    { "@type": "Place", "name": "Castle Hill, NSW" },
-    { "@type": "Place", "name": "Bella Vista, NSW" },
+    { "@type": "Place", "name": "Eastern Suburbs, Sydney, NSW" },
+    { "@type": "Place", "name": "Bondi, NSW" },
+    { "@type": "Place", "name": "Randwick, NSW" },
+    { "@type": "Place", "name": "Lower North Shore, Sydney, NSW" },
+    { "@type": "Place", "name": "Crows Nest, NSW" },
+    { "@type": "Place", "name": "Mosman, NSW" },
+    { "@type": "Place", "name": "Neutral Bay, NSW" },
     { "@type": "Place", "name": "St Ives, NSW" },
     { "@type": "Place", "name": "Turramurra, NSW" },
-    { "@type": "Place", "name": "Eastern Suburbs, Sydney, NSW" },
-    { "@type": "Place", "name": "Lower North Shore, Sydney, NSW" },
     { "@type": "Place", "name": "Sydney, NSW" }
   ]
 }
@@ -133,10 +146,25 @@ img { max-width: 100%; display: block; }
   background-position: center;
   opacity: 0.22;
 }
+.section-photo.photo-reviews::before {
+  background-image: url("images/bg-reviews.jpg");
+  opacity: 0.16;
+}
 .section-photo > .wrap { position: relative; z-index: 1; }
 /* white cards keep dark headings even on a dark section */
 .section-dark .card h3 { color: var(--text-dark); }
 .section-dark .grid-note { color: rgba(255,255,255,0.75); }
+
+/* ============================================================
+   THE LOGO SWOOSH, DRAWN IN CODE
+   This is the arc from the logo, redrawn as shapes rather than a
+   picture file, so it can never fail to load and stays sharp at any
+   size. It uses the two brand blues. It appears in the nav, across
+   the hero, and in the footer.
+   ============================================================ */
+.swoosh { display: block; width: 100%; height: auto; overflow: visible; }
+.swoosh .arc-bright { stroke: var(--accent-bright); }
+.swoosh .arc-dark   { stroke: var(--primary); }
 
 /* Buttons */
 .btn {
@@ -173,22 +201,41 @@ a:focus-visible, button:focus-visible {
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(14,44,62,0.10);
 }
-.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-.brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
-.brand img { height: 40px; width: auto; }
-/* The logo already reads "ClearView Window Detailing", so the text beside it
-   only appears if the image fails to load. */
-.brand .brand-name { display: none; }
-.brand.no-logo .brand-name { display: block; }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; min-height: 84px; gap: 16px; }
+
+/* ============================================================
+   THE BUSINESS NAME AT THE TOP
+   Built from text and the swoosh above, not from a picture, so it is
+   large and crisp on every screen. To make it bigger or smaller,
+   change the 34px in .brand-name below. Nothing else needs touching.
+   ============================================================ */
+.brand { display: block; text-decoration: none; padding: 12px 0; }
+.brand-lockup { display: block; }
+.brand-swoosh { width: 100%; max-width: 260px; margin: 0 auto -6px; }
 .brand-name {
   font-family: var(--font-head);
-  font-weight: 700;
-  font-size: 17px;
-  color: var(--primary);
-  line-height: 1.1;
-  letter-spacing: -0.01em;
+  font-weight: 800;
+  font-size: clamp(26px, 4.6vw, 34px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  text-align: center;
 }
-.nav-right { display: flex; align-items: center; gap: 18px; }
+.bn-clear { color: var(--primary); }
+.bn-view  { color: var(--accent); }
+.brand-sub {
+  display: block;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: clamp(9px, 1.5vw, 11.5px);
+  letter-spacing: 0.30em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  text-align: center;
+  margin-top: 5px;
+  padding-left: 0.30em; /* balances the trailing letter space */
+}
+.nav-right { display: flex; align-items: center; gap: 18px; flex: none; }
 .nav-phone {
   font-family: var(--font-head);
   font-weight: 600;
@@ -227,6 +274,19 @@ a:focus-visible, button:focus-visible {
   background: var(--accent-bright);
   flex: none;
 }
+/* the swoosh again, very large and faint, sweeping across the hero */
+.hero-swoosh {
+  position: absolute;
+  right: -8%;
+  bottom: -6%;
+  width: 78%;
+  min-width: 520px;
+  z-index: 1;
+  opacity: 0.30;
+  pointer-events: none;
+}
+.hero-swoosh .arc-bright { stroke: var(--accent-bright); }
+.hero-swoosh .arc-dark   { stroke: #FFFFFF; opacity: 0.5; }
 
 /* Squeegee pass: the glass clears once on load */
 .hero-media img { animation: clear-glass 1500ms cubic-bezier(.22,.61,.36,1) both; }
@@ -254,7 +314,6 @@ a:focus-visible, button:focus-visible {
 
 /* Services */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; max-width: 860px; }
 .card {
   background: var(--bg);
   border: 1px solid rgba(14,44,62,0.09);
@@ -275,7 +334,8 @@ a:focus-visible, button:focus-visible {
 .card-mark {
   width: 34px;
   height: 3px;
-  background: var(--accent-bright);
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-bright) 100%);
+  border-radius: 2px;
   margin-bottom: 18px;
 }
 .grid-note { margin: 30px 0 0; font-size: 15px; color: var(--text-muted); }
@@ -287,13 +347,27 @@ a:focus-visible, button:focus-visible {
 .trust-item p { font-size: 15px; margin-bottom: 0; }
 
 /* Testimonials */
+.rating-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 26px;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 15px;
+  color: #FFFFFF;
+}
+.rating-stars { color: var(--accent-bright); letter-spacing: 0.14em; font-size: 17px; }
 .quote-card {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.14);
   border-radius: var(--radius);
   padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
 }
 .quote-card p { font-size: 16px; }
+.quote-card p:first-of-type { flex: 1; }
 .quote-who {
   font-family: var(--font-head);
   font-weight: 600;
@@ -304,12 +378,25 @@ a:focus-visible, button:focus-visible {
 
 /* Quote block */
 .quote-panel {
+  position: relative;
+  overflow: hidden;
   background: var(--bg-light);
   border: 1px solid rgba(14,44,62,0.09);
   border-left: 4px solid var(--accent);
   border-radius: var(--radius);
   padding: clamp(28px, 4vw, 44px);
   max-width: 760px;
+}
+.quote-panel > * { position: relative; z-index: 1; }
+.quote-swoosh {
+  position: absolute;
+  right: -14%;
+  top: -30%;
+  width: 62%;
+  min-width: 300px;
+  z-index: 0;
+  opacity: 0.16;
+  pointer-events: none;
 }
 .quote-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 .btn-outline { background: transparent; color: var(--accent); border-color: var(--accent); }
@@ -319,7 +406,7 @@ a:focus-visible, button:focus-visible {
 .footer { background: var(--primary); color: rgba(255,255,255,0.72); padding: 52px 0 30px; font-size: 15px; }
 .footer a { color: #FFFFFF; text-decoration: none; }
 .footer a:hover { text-decoration: underline; }
-.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 30px; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1.3fr; gap: 30px; }
 .footer-title {
   font-family: var(--font-head);
   font-weight: 700;
@@ -327,6 +414,34 @@ a:focus-visible, button:focus-visible {
   color: #FFFFFF;
   margin: 0 0 10px;
 }
+.footer-swoosh { width: 150px; margin-bottom: 14px; opacity: 0.9; }
+.footer-swoosh .arc-dark { stroke: #FFFFFF; opacity: 0.55; }
+.area-group { margin: 0 0 12px; }
+.area-group strong {
+  display: block;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--accent-bright);
+}
+.area-group span { font-size: 14.5px; }
+
+/* Social */
+.social { display: flex; gap: 12px; margin-top: 16px; }
+.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.24);
+  transition: background-color .15s ease, transform .15s ease;
+}
+.social a:hover { background: var(--accent); transform: translateY(-2px); text-decoration: none; }
+.social svg { width: 20px; height: 20px; fill: #FFFFFF; }
+
 .footer-legal {
   margin-top: 38px;
   padding-top: 20px;
@@ -336,24 +451,26 @@ a:focus-visible, button:focus-visible {
 }
 
 /* Mobile */
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .grid-3 { grid-template-columns: 1fr 1fr; }
   .trust { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 640px) {
   body { font-size: 16px; }
+  .nav-inner { min-height: 76px; }
+  .brand-swoosh { max-width: 200px; }
   .grid-3 { grid-template-columns: 1fr; }
-  .grid-2 { grid-template-columns: 1fr; }
   .trust { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .nav-phone { display: none; }
   .hero-actions .btn { width: 100%; }
+  .hero-swoosh { width: 130%; right: -30%; opacity: 0.22; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .hero-media img, .squeegee { animation: none; }
-  .card:hover, .btn-primary:hover { transform: none; }
+  .card:hover, .btn-primary:hover, .social a:hover { transform: none; }
 }
 </style>
 </head>
@@ -362,12 +479,15 @@ a:focus-visible, button:focus-visible {
 <!-- ============ NAV ============ -->
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="#top">
-      <!-- EDIT: logo file. Lowercase filename, no spaces, transparent PNG.
-           If there is no logo yet, delete the img line and keep the text. -->
-      <img src="images/logo.png" alt="ClearView Window Detailing"
-           onerror="this.closest('.brand').classList.add('no-logo'); this.remove();">
-      <span class="brand-name">ClearView<br>Window Detailing</span>
+    <a class="brand" href="#top" aria-label="ClearView Window Detailing, back to top">
+      <span class="brand-lockup">
+        <svg class="swoosh brand-swoosh" viewBox="0 0 240 40" aria-hidden="true" focusable="false">
+          <path class="arc-bright" d="M6 33 C 72 3, 168 -1, 234 15" fill="none" stroke-width="8" stroke-linecap="round"/>
+          <path class="arc-dark"   d="M16 38 C 80 13, 170 9, 228 23" fill="none" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name"><span class="bn-clear">Clear</span><span class="bn-view">View</span></span>
+        <span class="brand-sub">Window Detailing</span>
+      </span>
     </a>
     <div class="nav-right">
       <a class="nav-phone" href="tel:04XXXXXXXX" data-phone-link>04XX XXX XXX</a>
@@ -382,9 +502,13 @@ a:focus-visible, button:focus-visible {
     <!-- EDIT: hero photo. Name it images/hero.jpg, lowercase, no spaces.
          Best choice is a wide shot of finished glass on a real job. -->
     <img src="images/hero.jpg"
-         alt="Frameless glass pool fence and paving at a Sydney home, cleaned by ClearView"
+         alt="Frameless glass pool fence and travertine paving at a Sydney home, cleaned by ClearView"
          onerror="this.remove()">
   </div>
+  <svg class="swoosh hero-swoosh" viewBox="0 0 240 40" aria-hidden="true" focusable="false">
+    <path class="arc-bright" d="M6 33 C 72 3, 168 -1, 234 15" fill="none" stroke-width="5" stroke-linecap="round"/>
+    <path class="arc-dark"   d="M16 38 C 80 13, 170 9, 228 23" fill="none" stroke-width="2" stroke-linecap="round"/>
+  </svg>
   <div class="squeegee" aria-hidden="true"></div>
   <div class="wrap">
     <div class="hero-inner">
@@ -409,13 +533,12 @@ a:focus-visible, button:focus-visible {
     </div>
 
     <!-- EDIT: services. Keep each description to two sentences.
-         A card shows a photo only if there is a real one for that job.
-         To add one, copy the <img class="card-photo"> line into the card and
-         point it at a new lowercase filename in the images folder. -->
+         To change a photo, point the src at a new lowercase filename
+         in the images folder. Every card now has one. -->
     <div class="grid-3">
       <div class="card">
         <img class="card-photo" src="images/tile-residential.jpg" loading="lazy"
-             alt="Gabor using a water fed pole to reach upper storey windows on a two storey home"
+             alt="Gabor using a water fed pole to reach an upper storey window on a two storey Sydney home"
              onerror="this.remove()">
         <div class="card-body">
           <div class="card-mark"></div>
@@ -425,7 +548,7 @@ a:focus-visible, button:focus-visible {
       </div>
       <div class="card">
         <img class="card-photo" src="images/tile-glass.jpg" loading="lazy"
-             alt="Gabor cleaning a glass staircase balustrade indoors, wearing shoe covers with a towel on the floor"
+             alt="Frameless glass balustrade on a timber staircase, cleaned on both sides"
              onerror="this.remove()">
         <div class="card-body">
           <div class="card-mark"></div>
@@ -435,7 +558,7 @@ a:focus-visible, button:focus-visible {
       </div>
       <div class="card">
         <img class="card-photo" src="images/tile-solar.jpg" loading="lazy"
-             alt="Gabor brushing solar panels on a tiled roof with a water fed brush"
+             alt="Gabor brushing rooftop solar panels with a water fed brush under clear sky"
              onerror="this.remove()">
         <div class="card-body">
           <div class="card-mark"></div>
@@ -444,6 +567,9 @@ a:focus-visible, button:focus-visible {
         </div>
       </div>
       <div class="card">
+        <img class="card-photo" src="images/tile-tracks.jpg" loading="lazy"
+             alt="Sliding door track cleaned out, bare aluminium with no grit left in the channels"
+             onerror="this.remove()">
         <div class="card-body">
           <div class="card-mark"></div>
           <h3>Track and frame detailing</h3>
@@ -451,6 +577,9 @@ a:focus-visible, button:focus-visible {
         </div>
       </div>
       <div class="card">
+        <img class="card-photo" src="images/tile-screens.jpg" loading="lazy"
+             alt="Sliding door and flyscreen washed and refitted, looking out to a pool terrace"
+             onerror="this.remove()">
         <div class="card-body">
           <div class="card-mark"></div>
           <h3>Flyscreen wash</h3>
@@ -458,6 +587,9 @@ a:focus-visible, button:focus-visible {
         </div>
       </div>
       <div class="card">
+        <img class="card-photo" src="images/tile-commercial.jpg" loading="lazy"
+             alt="Floor to ceiling shopfront glass cleaned inside a commercial cafe space"
+             onerror="this.remove()">
         <div class="card-body">
           <div class="card-mark"></div>
           <h3>Small commercial</h3>
@@ -493,23 +625,28 @@ a:focus-visible, button:focus-visible {
       </div>
       <div class="trust-item">
         <h3>All of Sydney</h3>
-        <p>Jobs taken right across the city, from the Hills District to the Sutherland Shire. Ask about your suburb.</p>
+        <p>The Hills District, the Sutherland Shire, the Eastern Suburbs and the Lower North Shore. Ask about your suburb.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ TESTIMONIALS ============ -->
-<section class="section section-dark" id="reviews">
+<section class="section section-dark section-photo photo-reviews" id="reviews">
   <div class="wrap">
     <div class="lede">
       <p class="eyebrow">Customers</p>
       <h2>What people say</h2>
     </div>
+    <!-- EDIT: the star line below is a real count. Update the number
+         whenever it changes, or delete the whole paragraph. -->
+    <p class="rating-line"><span class="rating-stars" aria-hidden="true">★★★★★</span> 5.0 from 15 Google reviews</p>
+
     <!-- EDIT: real Google reviews, trimmed to two sentences each.
          First name and suburb only, never a surname. Do not write a new one.
-         A third card needs .grid-3 on the div below instead of .grid-2. -->
-    <div class="grid-2">
+         Suburbs are missing on four of these because they are not known.
+         Add them in when Gabor confirms them, it helps local search. -->
+    <div class="grid-3">
       <div class="quote-card">
         <p>Gab was polite, professional, proficient, respectful and honest. His work was exceptional.</p>
         <p class="quote-who">Richard, Barden Ridge</p>
@@ -517,6 +654,22 @@ a:focus-visible, button:focus-visible {
       <div class="quote-card">
         <p>Couldn't recommend Clearview enough! Gabor did an amazing job and was super thorough.</p>
         <p class="quote-who">Crystal, North Rocks</p>
+      </div>
+      <div class="quote-card">
+        <p>Gab did a fantastic job. My windows are crystal clear, fly screen scrubbed and he removed the mould.</p>
+        <p class="quote-who">Susanne</p>
+      </div>
+      <div class="quote-card">
+        <p>Gab did an excellent job. He was punctual, friendly and respectful of our home.</p>
+        <p class="quote-who">Anne</p>
+      </div>
+      <div class="quote-card">
+        <p>If you want sparkling glass windows, clean frames and flyscreens Gabor is your man.</p>
+        <p class="quote-who">Kathryn</p>
+      </div>
+      <div class="quote-card">
+        <p>Good job, very efficient. See you in December.</p>
+        <p class="quote-who">Robyn</p>
       </div>
     </div>
   </div>
@@ -526,6 +679,10 @@ a:focus-visible, button:focus-visible {
 <section class="section" id="quote">
   <div class="wrap">
     <div class="quote-panel">
+      <svg class="swoosh quote-swoosh" viewBox="0 0 240 40" aria-hidden="true" focusable="false">
+        <path class="arc-bright" d="M6 33 C 72 3, 168 -1, 234 15" fill="none" stroke-width="8" stroke-linecap="round"/>
+        <path class="arc-dark"   d="M16 38 C 80 13, 170 9, 228 23" fill="none" stroke-width="3" stroke-linecap="round"/>
+      </svg>
       <p class="eyebrow">Get started</p>
       <h2>Request a free quote</h2>
       <p>Call or email with your suburb and what needs cleaning. Send a photo if you have one. You will have a price back by the end of the next business day, and a call if anything needs checking.</p>
@@ -550,8 +707,21 @@ a:focus-visible, button:focus-visible {
   <div class="wrap">
     <div class="footer-grid">
       <div>
+        <svg class="swoosh footer-swoosh" viewBox="0 0 240 40" aria-hidden="true" focusable="false">
+          <path class="arc-bright" d="M6 33 C 72 3, 168 -1, 234 15" fill="none" stroke-width="8" stroke-linecap="round"/>
+          <path class="arc-dark"   d="M16 38 C 80 13, 170 9, 228 23" fill="none" stroke-width="3" stroke-linecap="round"/>
+        </svg>
         <p class="footer-title">ClearView Window Detailing</p>
         <p>Residential and small commercial window detailing, right across Sydney.</p>
+        <!-- EDIT: social links. Delete a whole <a> block to remove an icon. -->
+        <div class="social">
+          <a href="https://www.facebook.com/clearviewwindowdetailing/" target="_blank" rel="noopener" aria-label="ClearView Window Detailing on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.41-.12-2.38 0-4.01 1.45-4.01 4.12v2.3H7.6V13h2.68v8h3.22z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/window.clearview/" target="_blank" rel="noopener" aria-label="ClearView Window Detailing on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.18A6.66 6.66 0 1 0 18.66 12 6.66 6.66 0 0 0 12 5.34zm0 10.98A4.32 4.32 0 1 1 16.32 12 4.32 4.32 0 0 1 12 16.32zM18.92 5.08a1.56 1.56 0 1 1-1.56-1.56 1.56 1.56 0 0 1 1.56 1.56z"/></svg>
+          </a>
+        </div>
       </div>
       <div>
         <p class="footer-title">Contact</p>
@@ -563,8 +733,13 @@ a:focus-visible, button:focus-visible {
       <div>
         <p class="footer-title">Areas we cover</p>
         <!-- EDIT: this list is what helps people in nearby areas find the site.
-             Add or remove suburb names here as the work changes. -->
-        <p>All of the Sutherland Shire, including Cronulla, Caringbah, Miranda, Sutherland, Engadine and Barden Ridge. North Rocks, Castle Hill and Bella Vista. St Ives and Turramurra. The Lower North Shore and the Eastern Suburbs.</p>
+             Add or remove suburb names here as the work changes. Anything added
+             here should also go in the structured data block at the top. -->
+        <p class="area-group"><strong>The Hills District</strong><span>North Rocks, Castle Hill, Bella Vista and Baulkham Hills.</span></p>
+        <p class="area-group"><strong>The Sutherland Shire</strong><span>Cronulla, Caringbah, Miranda, Sutherland, Engadine and Barden Ridge.</span></p>
+        <p class="area-group"><strong>The Eastern Suburbs</strong><span>Bondi and Randwick.</span></p>
+        <p class="area-group"><strong>The Lower North Shore</strong><span>Crows Nest, Mosman and Neutral Bay.</span></p>
+        <p class="area-group"><strong>Upper North Shore</strong><span>St Ives and Turramurra.</span></p>
       </div>
     </div>
     <p class="footer-legal">
