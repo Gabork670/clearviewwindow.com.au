@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClearView Window Detailing | Window Cleaning Across Sydney</title>
+<meta name="description" content="Detailed residential and commercial window cleaning across Sydney. Frames, tracks, screens and glass fences included. Free quotes.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     SERVICE AREA, MACHINE READABLE
+     This tells Google which suburbs the business covers. It is not
+     shown on the page. Add or remove a suburb by copying one of the
+     lines below. Keep the commas and the quote marks exactly as they
+     are or the whole block stops working.
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ClearView Window Detailing",
+  "description": "Detailed residential and small commercial window cleaning across Sydney. Glass, frames, sills, tracks, flyscreens, balustrades, glass fences and solar panels.",
+  "image": "images/logo.png",
+  "telephone": "+61450757500",
+  "email": "info@clearviewwindow.com.au",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "North Rocks",
+    "addressRegion": "NSW",
+    "addressCountry": "AU"
+  },
+  "areaServed": [
+    { "@type": "Place", "name": "Sutherland Shire, NSW" },
+    { "@type": "Place", "name": "Cronulla, NSW" },
+    { "@type": "Place", "name": "Caringbah, NSW" },
+    { "@type": "Place", "name": "Miranda, NSW" },
+    { "@type": "Place", "name": "Sutherland, NSW" },
+    { "@type": "Place", "name": "Engadine, NSW" },
+    { "@type": "Place", "name": "Barden Ridge, NSW" },
+    { "@type": "Place", "name": "North Rocks, NSW" },
+    { "@type": "Place", "name": "Castle Hill, NSW" },
+    { "@type": "Place", "name": "Bella Vista, NSW" },
+    { "@type": "Place", "name": "St Ives, NSW" },
+    { "@type": "Place", "name": "Turramurra, NSW" },
+    { "@type": "Place", "name": "Eastern Suburbs, Sydney, NSW" },
+    { "@type": "Place", "name": "Lower North Shore, Sydney, NSW" },
+    { "@type": "Place", "name": "Sydney, NSW" }
+  ]
+}
+</script>
+
+<style>
+/* ============================================================
+   EDIT ZONE 1 OF 3: COLOURS AND FONTS
+   Swap the two hex values below for Gabor's brand colours.
+   Everything on the page follows from them. Never hardcode a
+   colour anywhere else in this file.
+   ============================================================ */
+:root {
+  --primary:      #0E2C3E;  /* deep ink from the logo swoosh, nav, dark blocks */
+  --accent:       #1477A6;  /* logo blue darkened so white text on it still reads */
+  --accent-bright:#46ADD8;  /* the logo blue exactly, hairlines and highlights only */
+  --bg:           #FFFFFF;
+  --bg-light:     #EEF5F9;
+  --text-dark:    #122630;
+  --text-mid:     #48626E;
+  --text-muted:   #7E939E;
+  --font-head:    'Montserrat', sans-serif;
+  --font-body:    'Open Sans', sans-serif;
+  --radius:       6px;
+  --shadow:       0 2px 12px rgba(14,44,62,0.10);
+  --shadow-lift:  0 10px 30px rgba(14,44,62,0.16);
+  --max:          1140px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-mid);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+h1, h2, h3 {
+  font-family: var(--font-head);
+  color: var(--text-dark);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 14px;
+}
+h1 { font-size: clamp(34px, 5.4vw, 58px); font-weight: 700; }
+h2 { font-size: clamp(26px, 3.4vw, 38px); font-weight: 700; }
+h3 { font-size: 19px; font-weight: 600; }
+p { margin: 0 0 16px; }
+a { color: var(--accent); }
+img { max-width: 100%; display: block; }
+
+.wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.section { padding: clamp(56px, 8vw, 96px) 0; }
+.section-light { background: var(--bg-light); }
+.section-dark { background: var(--primary); }
+.section-dark h2, .section-dark h3 { color: #FFFFFF; }
+.section-dark p { color: rgba(255,255,255,0.82); }
+.lede { max-width: 620px; margin-bottom: 44px; }
+.eyebrow {
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+.section-dark .eyebrow { color: var(--accent-bright); }
+
+/* A photo sitting behind a dark section.
+   Raise or lower the 0.22 below to make the photo stronger or fainter.
+   Swap the filename to change the picture. Nothing else needs touching. */
+.section-photo { position: relative; overflow: hidden; }
+.section-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("images/bg-services.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.22;
+}
+.section-photo > .wrap { position: relative; z-index: 1; }
+/* white cards keep dark headings even on a dark section */
+.section-dark .card h3 { color: var(--text-dark); }
+.section-dark .grid-note { color: rgba(255,255,255,0.75); }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 26px;
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
+}
+.btn-primary { background: var(--accent); color: #FFFFFF; box-shadow: var(--shadow); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+.btn-ghost { background: transparent; color: #FFFFFF; border-color: rgba(255,255,255,0.55); }
+.btn-ghost:hover { background: rgba(255,255,255,0.12); }
+.btn-sm { min-height: 42px; padding: 0 18px; font-size: 14px; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--accent-bright);
+  outline-offset: 3px;
+}
+
+/* Nav */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(14,44,62,0.10);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+.brand img { height: 40px; width: auto; }
+/* The logo already reads "ClearView Window Detailing", so the text beside it
+   only appears if the image fails to load. */
+.brand .brand-name { display: none; }
+.brand.no-logo .brand-name { display: block; }
+.brand-name {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--primary);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.nav-right { display: flex; align-items: center; gap: 18px; }
+.nav-phone {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--primary);
+  text-decoration: none;
+}
+.nav-phone:hover { color: var(--accent); }
+
+/* Hero */
+.hero { position: relative; background: var(--primary); overflow: hidden; }
+.hero-media { position: absolute; inset: 0; }
+.hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 68% 50%; }
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(14,44,62,0.86) 0%, rgba(14,44,62,0.66) 55%, rgba(14,44,62,0.42) 100%);
+}
+.hero-inner { position: relative; z-index: 2; padding: clamp(72px, 11vw, 132px) 0; max-width: 700px; }
+.hero h1 { color: #FFFFFF; }
+.hero p { color: rgba(255,255,255,0.88); font-size: clamp(17px, 2vw, 20px); max-width: 540px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.hero-note {
+  margin-top: 22px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.72);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.hero-note::before {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background: var(--accent-bright);
+  flex: none;
+}
+
+/* Squeegee pass: the glass clears once on load */
+.hero-media img { animation: clear-glass 1500ms cubic-bezier(.22,.61,.36,1) both; }
+@keyframes clear-glass {
+  0%   { filter: blur(16px) saturate(.72) brightness(1.06); transform: scale(1.06); }
+  100% { filter: blur(0) saturate(1) brightness(1); transform: scale(1); }
+}
+.squeegee {
+  position: absolute;
+  top: -10%;
+  left: -30%;
+  width: 22%;
+  height: 120%;
+  z-index: 1;
+  background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.30) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-12deg);
+  animation: squeegee-pass 1500ms cubic-bezier(.22,.61,.36,1) both;
+  pointer-events: none;
+}
+@keyframes squeegee-pass {
+  0%   { left: -30%; opacity: 0; }
+  20%  { opacity: 1; }
+  100% { left: 115%; opacity: 0; }
+}
+
+/* Services */
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; max-width: 860px; }
+.card {
+  background: var(--bg);
+  border: 1px solid rgba(14,44,62,0.09);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+.card-body { padding: 26px 24px 24px; }
+.card h3 { margin-bottom: 8px; }
+.card p { font-size: 15.5px; margin-bottom: 0; color: var(--text-mid); }
+.card-photo {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  background: var(--primary);
+}
+.card-mark {
+  width: 34px;
+  height: 3px;
+  background: var(--accent-bright);
+  margin-bottom: 18px;
+}
+.grid-note { margin: 30px 0 0; font-size: 15px; color: var(--text-muted); }
+
+/* Why us */
+.trust { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+.trust-item { border-top: 3px solid var(--accent-bright); padding-top: 18px; }
+.trust-item h3 { margin-bottom: 6px; }
+.trust-item p { font-size: 15px; margin-bottom: 0; }
+
+/* Testimonials */
+.quote-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+}
+.quote-card p { font-size: 16px; }
+.quote-who {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent-bright);
+  margin: 0;
+}
+
+/* Quote block */
+.quote-panel {
+  background: var(--bg-light);
+  border: 1px solid rgba(14,44,62,0.09);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: clamp(28px, 4vw, 44px);
+  max-width: 760px;
+}
+.quote-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.btn-outline { background: transparent; color: var(--accent); border-color: var(--accent); }
+.btn-outline:hover { background: var(--accent); color: #FFFFFF; }
+
+/* Footer */
+.footer { background: var(--primary); color: rgba(255,255,255,0.72); padding: 52px 0 30px; font-size: 15px; }
+.footer a { color: #FFFFFF; text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 30px; }
+.footer-title {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 17px;
+  color: #FFFFFF;
+  margin: 0 0 10px;
+}
+.footer-legal {
+  margin-top: 38px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+}
+
+/* Mobile */
+@media (max-width: 860px) {
+  .grid-3 { grid-template-columns: 1fr 1fr; }
+  .trust { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .trust { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .nav-phone { display: none; }
+  .hero-actions .btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-media img, .squeegee { animation: none; }
+  .card:hover, .btn-primary:hover { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <!-- EDIT: logo file. Lowercase filename, no spaces, transparent PNG.
+           If there is no logo yet, delete the img line and keep the text. -->
+      <img src="images/logo.png" alt="ClearView Window Detailing"
+           onerror="this.closest('.brand').classList.add('no-logo'); this.remove();">
+      <span class="brand-name">ClearView<br>Window Detailing</span>
+    </a>
+    <div class="nav-right">
+      <a class="nav-phone" href="tel:04XXXXXXXX" data-phone-link>04XX XXX XXX</a>
+      <a class="btn btn-primary btn-sm" href="#quote">Get a free quote</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-media">
+    <!-- EDIT: hero photo. Name it images/hero.jpg, lowercase, no spaces.
+         Best choice is a wide shot of finished glass on a real job. -->
+    <img src="images/hero.jpg"
+         alt="Frameless glass pool fence and paving at a Sydney home, cleaned by ClearView"
+         onerror="this.remove()">
+  </div>
+  <div class="squeegee" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <h1>Glass you can see straight through.</h1>
+      <p>Detailed window cleaning for homes and small commercial sites right across Sydney. Frames, tracks and screens included, every single job.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#quote">Get a free quote</a>
+        <a class="btn btn-ghost" href="tel:04XXXXXXXX" data-phone-link>Call 04XX XXX XXX</a>
+      </div>
+      <p class="hero-note">Fully insured. Quotes back within one business day.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section section-dark section-photo" id="services">
+  <div class="wrap">
+    <div class="lede">
+      <p class="eyebrow">What we do</p>
+      <h2>Detailing, not just a wash</h2>
+      <p>A rushed window clean leaves the glass streaked and the tracks full of grit. Every job here covers the parts most cleaners skip.</p>
+    </div>
+
+    <!-- EDIT: services. Keep each description to two sentences.
+         A card shows a photo only if there is a real one for that job.
+         To add one, copy the <img class="card-photo"> line into the card and
+         point it at a new lowercase filename in the images folder. -->
+    <div class="grid-3">
+      <div class="card">
+        <img class="card-photo" src="images/tile-residential.jpg" loading="lazy"
+             alt="Gabor using a water fed pole to reach upper storey windows on a two storey home"
+             onerror="this.remove()">
+        <div class="card-body">
+          <div class="card-mark"></div>
+          <h3>Residential window cleaning</h3>
+          <p>Inside and out, glass, frames, sills and tracks. Ground and first floor covered from ladders and water fed poles.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-photo" src="images/tile-glass.jpg" loading="lazy"
+             alt="Gabor cleaning a glass staircase balustrade indoors, wearing shoe covers with a towel on the floor"
+             onerror="this.remove()">
+        <div class="card-body">
+          <div class="card-mark"></div>
+          <h3>Balustrades and glass fences</h3>
+          <p>Frameless panels cleaned both sides, along with the spigots and handrails. Stairs, balconies and pool surrounds.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-photo" src="images/tile-solar.jpg" loading="lazy"
+             alt="Gabor brushing solar panels on a tiled roof with a water fed brush"
+             onerror="this.remove()">
+        <div class="card-body">
+          <div class="card-mark"></div>
+          <h3>Solar panel cleaning</h3>
+          <p>Dust and bird mess removed with pure water and a soft brush. No detergents and nothing abrasive near the panel surface.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-mark"></div>
+          <h3>Track and frame detailing</h3>
+          <p>Sliding door tracks vacuumed, scrubbed and wiped dry. Doors run properly again instead of grinding on built up grit.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-mark"></div>
+          <h3>Flyscreen wash</h3>
+          <p>Screens removed, washed, dried and refitted to the right opening. Insect mesh comes back to its original colour.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-mark"></div>
+          <h3>Small commercial</h3>
+          <p>Shopfronts, offices and strata common areas on a set schedule. Weekly, fortnightly or monthly, invoiced monthly.</p>
+        </div>
+      </div>
+    </div>
+    <p class="grid-note">Not sure which one you need? Send a photo with your quote request and you will get a fixed price back.</p>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="lede">
+      <p class="eyebrow">Why ClearView</p>
+      <h2>Four things that make the difference</h2>
+    </div>
+    <!-- EDIT: only claims that can be evidenced. Insurance line needs a
+         current certificate of currency. Years in business needs a real date. -->
+    <div class="trust">
+      <div class="trust-item">
+        <h3>Fully insured</h3>
+        <p>Public liability cover in place. Certificate available on request before the job starts.</p>
+      </div>
+      <div class="trust-item">
+        <h3>Quotes inside a day</h3>
+        <p>Every request gets a price back by the end of the next business day. If it needs a look first, you will hear that instead of nothing.</p>
+      </div>
+      <div class="trust-item">
+        <h3>Owner on every job</h3>
+        <p>The person who quotes the work is the person who does it. No subcontractors sent in your place.</p>
+      </div>
+      <div class="trust-item">
+        <h3>All of Sydney</h3>
+        <p>Jobs taken right across the city, from the Hills District to the Sutherland Shire. Ask about your suburb.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section section-dark" id="reviews">
+  <div class="wrap">
+    <div class="lede">
+      <p class="eyebrow">Customers</p>
+      <h2>What people say</h2>
+    </div>
+    <!-- EDIT: real Google reviews, trimmed to two sentences each.
+         First name and suburb only, never a surname. Do not write a new one.
+         A third card needs .grid-3 on the div below instead of .grid-2. -->
+    <div class="grid-2">
+      <div class="quote-card">
+        <p>Gab was polite, professional, proficient, respectful and honest. His work was exceptional.</p>
+        <p class="quote-who">Richard, Barden Ridge</p>
+      </div>
+      <div class="quote-card">
+        <p>Couldn't recommend Clearview enough! Gabor did an amazing job and was super thorough.</p>
+        <p class="quote-who">Crystal, North Rocks</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE ============ -->
+<section class="section" id="quote">
+  <div class="wrap">
+    <div class="quote-panel">
+      <p class="eyebrow">Get started</p>
+      <h2>Request a free quote</h2>
+      <p>Call or email with your suburb and what needs cleaning. Send a photo if you have one. You will have a price back by the end of the next business day, and a call if anything needs checking.</p>
+      <div class="quote-actions">
+        <a class="btn btn-primary" href="tel:04XXXXXXXX" data-phone-link>Call 04XX XXX XXX</a>
+        <a class="btn btn-outline" href="mailto:hello@example.com.au" data-email-link>hello@example.com.au</a>
+      </div>
+      <!-- EDIT: once the Google Form exists, delete the two buttons above and
+           uncomment the three lines below, pasting the share link in place of
+           PASTE_GOOGLE_FORM_LINK_HERE. Keep target and rel exactly as they are.
+      <div class="quote-actions">
+        <a class="btn btn-primary" href="PASTE_GOOGLE_FORM_LINK_HERE" target="_blank" rel="noopener">Open the quote form</a>
+        <a class="btn btn-outline" href="tel:04XXXXXXXX" data-phone-link>Or call 04XX XXX XXX</a>
+      </div>
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-title">ClearView Window Detailing</p>
+        <p>Residential and small commercial window detailing, right across Sydney.</p>
+      </div>
+      <div>
+        <p class="footer-title">Contact</p>
+        <p>
+          <a href="tel:04XXXXXXXX" data-phone-link>04XX XXX XXX</a><br>
+          <a href="mailto:hello@example.com.au" data-email-link>hello@example.com.au</a>
+        </p>
+      </div>
+      <div>
+        <p class="footer-title">Areas we cover</p>
+        <!-- EDIT: this list is what helps people in nearby areas find the site.
+             Add or remove suburb names here as the work changes. -->
+        <p>All of the Sutherland Shire, including Cronulla, Caringbah, Miranda, Sutherland, Engadine and Barden Ridge. North Rocks, Castle Hill and Bella Vista. St Ives and Turramurra. The Lower North Shore and the Eastern Suburbs.</p>
+      </div>
+    </div>
+    <p class="footer-legal">
+      <!-- EDIT: ABN. Delete this line if it is not going on the page. -->
+      ABN 90 197 553 089 &nbsp;|&nbsp; &copy; <span id="year">2026</span> ClearView Window Detailing. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   EDIT ZONE 2 OF 3: CONTACT DETAILS
+   Change these two lines only. Every phone number and email on
+   the page updates from here, including the tap to call links.
+   ============================================================ */
+var CONTACT = {
+  phone: "0450 757 500",           /* exactly as it should read on screen */
+  email: "info@clearviewwindow.com.au"
+};
+
+/* ---- nothing below needs editing ---- */
+(function () {
+  var tel = "tel:" + CONTACT.phone.replace(/\s+/g, "");
+  document.querySelectorAll("[data-phone-link]").forEach(function (el) {
+    el.setAttribute("href", tel);
+    el.textContent = el.textContent.replace(/04XX XXX XXX/, CONTACT.phone);
+  });
+  document.querySelectorAll("[data-email-link]").forEach(function (el) {
+    el.setAttribute("href", "mailto:" + CONTACT.email);
+    el.textContent = CONTACT.email;
+  });
+  var y = document.getElementById("year");
+  if (y) { y.textContent = new Date().getFullYear(); }
+})();
+</script>
+
+</body>
+</html>
